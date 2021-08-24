@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="1650ebb1-c3b2-4cd3-a888-8d7f1932272b" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="salesforce-system-apiFlow" doc:id="12cf7375-5983-472f-a774-8509bde91edf" >
+		<http:listener doc:name="Listener" doc:id="06eab73e-6e27-41db-a9c7-f356facade9b" config-ref="HTTP_Listener_config" path="/getaccinfo"/>
+		<logger level="INFO" doc:name="Logger" doc:id="cf0af9bb-de64-4c17-995a-ea3ea0cb94ab" message="Request to retrieve account info == #[payload]"/>
+		<ee:transform doc:name="Transform Message" doc:id="46dd0388-d4de-40b9-88de-649904d6e604" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"accountId" : 124545,
+	"account name" : "Google", 
+	"retrieval time " :  now() as String
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="412d7ebf-abb6-4da0-a5f0-84b523ca93e6" message="Response == #[payload]"/>
+	</flow>
+</mule>
