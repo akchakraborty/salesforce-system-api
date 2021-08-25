@@ -38,6 +38,7 @@
 						<environment>Sandbox</environment>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
+						<objectStoreV2>true</objectStoreV2>
 						<applicationName>Salesforce-System-API-v1</applicationName>
 					</cloudHubDeployment>
 				</configuration>
