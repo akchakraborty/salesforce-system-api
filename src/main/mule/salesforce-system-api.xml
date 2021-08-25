@@ -17,7 +17,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 output application/json
 ---
 {
-	"accountId" : 1234,
+	"accountId" : 1234567,
 	"account name" : "Facebook", 
 	"retrieval time " :  now() as String
 }]]></ee:set-payload>
