@@ -23,6 +23,6 @@ output application/json
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="412d7ebf-abb6-4da0-a5f0-84b523ca93e6" message="Response == #[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="412d7ebf-abb6-4da0-a5f0-84b523ca93e6" message="Salesforce System API Response == #[payload]"/>
 	</flow>
 </mule>
