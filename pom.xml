@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.3.0-20210622</app.runtime>
+		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.5.1</mule.maven.plugin.version>
 	</properties>
 
@@ -31,13 +31,14 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.3.0</muleVersion>
 						<username>muletrainer20</username>
 						<password>Demo@123</password>
 						<environment>${env}</environment>
 						<workers>1</workers>
 						<workerType>${workerType}</workerType>
 						<applicationName>Salesforce-System-API-v1</applicationName>
-						<muleVersion>${mule.version}</muleVersion>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
