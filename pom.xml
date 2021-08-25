@@ -35,9 +35,9 @@
 						<muleVersion>4.3.0</muleVersion>
 						<username>muletrainer21</username>
 						<password>Demo@123</password>
-						<environment>${env}</environment>
+						<environment>SandBox</environment>
 						<workers>1</workers>
-						<workerType>${workerType}</workerType>
+						<workerType>Micro</workerType>
 						<applicationName>Salesforce-System-API-v1</applicationName>
 					</cloudHubDeployment>
 				</configuration>
