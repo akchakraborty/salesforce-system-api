@@ -37,7 +37,7 @@
 						<workers>1</workers>
 						<workerType>${workerType}</workerType>
 						<applicationName>Salesforce-System-API-v1</applicationName>
-						<muleversion>${mule.version}</muleversion>
+						<muleVersion>${mule.version}</muleVersion>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
