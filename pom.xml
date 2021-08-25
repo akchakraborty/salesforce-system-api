@@ -33,9 +33,9 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.3.0</muleVersion>
-						<username>muletrainer21</username>
+						<username>muletrainer20</username>
 						<password>Demo@123</password>
-						<environment>SandBox</environment>
+						<environment>Sandbox</environment>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
 						<applicationName>Salesforce-System-API-v1</applicationName>
